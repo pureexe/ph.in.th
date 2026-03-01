@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pakkapon Phongthawee - Computer Vision Researcher & HPC Systems Engineer">
+    <title>Pakkapon Phongthawee - Computer Vision & HPC</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        .lang-toggle {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        /* linear-gradient(135deg, rgba(88, 46, 145, 0.7) 0%, rgba(160, 34, 58, 0.7) 100%)  */
+        /* linear-gradient(rgba(41, 50, 71, 0.85), rgba(15, 23, 42, 0.95)), */
+
+        .hero-with-bg {
+            background: linear-gradient(135deg, rgba(18, 9, 29, 0.85) 0%, rgba(32, 7, 12, 0.85) 100%), 
+                        url('/assets/images/vistec.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero-with-bg .title, 
+        .hero-with-bg .subtitle, 
+        .hero-with-bg p {
+            color: #f8fafc; 
+        }
+
+        .hpc-with-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                        url('/assets/images/cluster_v2.jpg') no-repeat center center;
+            background-size: cover;
+            color: #f8fafc;
+        }
+
+        .hpc-with-bg .title,
+        .hpc-with-bg strong,
+        .hpc-with-bg ul {
+            color: #f8fafc;
+        }
+
+        .hpc-with-bg .section-heading {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-img-container {
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+            width: 256px;  /* Force a perfect square container */
+            height: 256px; /* Force a perfect square container */
+            margin: 0 auto;
+            display: flex;
+        }
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This prevents the squishing! */
+        }
+
+        .visual-placeholder {
+            background-color: #2b2b2b;
+            color: #7a7a7a;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .visual-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        
+        .section-heading {
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eaeaea;
+        }
+        
+        .research-item {
+            transition: transform 0.2s ease;
+        }
+        .research-item:hover {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+
+    <a href="th.html" class="button is-dark is-rounded lang-toggle">
+        <figure class="image is-16x16 mr-2" style="display: flex; align-items: center;">
+            <img src="https://flagcdn.com/th.svg" alt="Thai Flag" style="border-radius: 2px;">
+        </figure>
+        <span>ภาษาไทย</span>
+    </a>
+
+    <section class="hero is-medium hero-with-bg">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered is-reversed-mobile">
+                    <div class="column is-two-thirds">
+                        <h1 class="title is-1">Pakkapon Phongthawee</h1>
+                        <p class="subtitle is-3 mt-3 has-text-grey-light">Computer Vision & HPC Systems</p>
+                        <p class="is-size-5 mb-5" style="max-width: 800px; line-height: 1.6;">
+                            I am a Ph.D. candidate in the Vision and Learning Lab (VLL) at VISTEC, advised by <a href="https://supasorn.com/" target="_blank" class="has-text-white" style="text-decoration: underline;">Prof. Supasorn Suwajanakorn</a>. 
+                            My research focuses on advancing state-of-the-art neural rendering, lighting estimation, and diffusion models. 
+                            Concurrently, I architect and manage the primary HPC infrastructure for both our lab and the wider institute, 
+                            overseeing a 200+ GPU compute cluster that powers large-scale AI research
+                        </p>
+                        <div class="buttons">
+                            <a href="https://github.com/pureexe" class="button is-light is-outlined" target="_blank">
+                                <span class="icon"><i class="fab fa-github"></i></span>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=elXgcfUAAAAJ&hl=en" class="button is-light is-outlined" target="_blank">
+                                <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+                                <span>Google Scholar</span>
+                            </a>
+                            <a href="#" class="button is-light is-outlined" target="_blank">
+                                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="button is-primary" target="_blank">
+                                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                                <span>Resume (PDF)</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column is-one-third has-text-centered mb-5-mobile">
+                        <figure class="image is-inline-block profile-img-container">
+                            <img src="/assets/images/face.jpg" alt="Pakkapon Phongthawee">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="title is-2 section-heading">Publications & Research</h2>
+            
+            <div class="columns is-vcentered mb-6 research-item">
+                <div class="column is-two-fifths">
+                    <div class="visual-placeholder">
+                        <figure class="image">
+                            <img src="/assets/images/works-diffusionlight-turbo.jpg" />
+                        </figure>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="title is-4 mb-2">
+                        DiffusionLight-Turbo
+                        <span class="tag is-link is-light ml-2">TPAMI 2026</span>
+                    </h3>
+                    <p class="mb-4 is-size-5">Accelerates the estimation of high-dynamic-range (HDR) environment maps to deliver accurate scene lighting in under 30 seconds.</p>
+                    <div class="buttons">
+                        <a href="https://diffusionlight.github.io/turbo/" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fas fa-globe"></i></span>Project Page</a>
+                        <a href="https://github.com/DiffusionLight/DiffusionLight-Turbo" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fab fa-github"></i></span>Code</a>
+                        <a href="https://arxiv.org/html/2507.01305" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fas fa-file-pdf"></i></span>Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-vcentered mb-6 research-item">
+                <div class="column is-two-fifths">
+                    <div class="visual-placeholder">
+                        <figure class="image">
+                            <img src="/assets/images/works-diffusionlight.jpg" />
+                        </figure>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="title is-4 mb-2">
+                        DiffusionLight
+                        <span class="tag is-danger is-light ml-2">CVPR 2024 (ORAL)</span>
+                    </h3>
+                    <p class="mb-4 is-size-5">Estimates realistic scene illumination by virtually in-painting a reflective chrome ball into any standard image.</p>
+                    <div class="buttons">
+                        <a href="https://diffusionlight.github.io" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fas fa-globe"></i></span>Project Page</a>
+                        <a href="https://github.com/DiffusionLight/DiffusionLight" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fab fa-github"></i></span>Code</a>
+                        <a href="https://arxiv.org/abs/2312.09168" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fas fa-file-pdf"></i></span>Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-vcentered mb-6 research-item">
+                <div class="column is-two-fifths">
+                    <div class="visual-placeholder">
+                        <figure class="image">
+                            <img src="/assets/images/works-stylegan-salon.jpg" />
+                        </figure>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="title is-4 mb-2">
+                        StyleGAN Salon
+                        <span class="tag is-info is-light ml-2">CVPR 2023</span>
+                    </h3>
+                    <p class="mb-4 is-size-5">Performs high-fidelity, structure-aware hairstyle transfer seamlessly adapting reference hair onto target portrait images.</p>
+                    <div class="buttons">
+                        <a href="https://stylegan-salon.github.io" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fas fa-globe"></i></span>Project Page</a>
+                        <a href="https://github.com/StyleGAN-Salon/StyleGAN-Salon" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fab fa-github"></i></span>Code</a>
+                        <a href="https://arxiv.org/abs/2304.02744" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fas fa-file-pdf"></i></span>Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-vcentered mb-6 research-item">
+                <div class="column is-two-fifths">
+                    <div class="visual-placeholder">
+                        <video autoplay loop muted playsinline controls style="border-radius: 8px; width: 100%;">
+                            <source src="/assets/video/lfship.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="title is-4 mb-2">
+                        NeX360
+                        <span class="tag is-link is-light ml-2">TPAMI 2022</span>
+                    </h3>
+                    <p class="mb-4 is-size-5">Achieves real-time, 360-degree novel view synthesis for highly detailed object-centric scenes.</p>
+                    <div class="buttons">
+                        <a href="https://nex-mpi.github.io/360" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fas fa-globe"></i></span>Project Page</a>
+                        <a href="https://github.com/nex-mpi/nex-code" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fab fa-github"></i></span>Code</a>
+                        <a href="https://ieeexplore.ieee.org/document/9931981/" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fas fa-file-pdf"></i></span>Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-vcentered mb-6 research-item">
+                <div class="column is-two-fifths">
+                    <div class="visual-placeholder">
+                        <video autoplay loop muted playsinline controls style="border-radius: 8px; width: 100%;">
+                            <source src="/assets/video/labjuice.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="title is-4 mb-2">
+                        NeX
+                        <span class="tag is-danger is-light ml-2">CVPR 2021 (ORAL)</span>
+                    </h3>
+                    <p class="mb-4 is-size-5">Enables real-time novel view synthesis of complex forward-facing scenes utilizing neural basis expansion.</p>
+                    <div class="buttons">
+                        <a href="https://nex-mpi.github.io" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fas fa-globe"></i></span>Project Page</a>
+                        <a href="https://github.com/nex-mpi/nex-code" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fab fa-github"></i></span>Code</a>
+                        <a href="https://arxiv.org/pdf/2103.05606" target="_blank" class="button is-small is-link is-light"><span class="icon mr-2"><i class="fas fa-file-pdf"></i></span>Paper</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section hpc-with-bg pb-6 pt-6">
+        <div class="container">
+            <h2 class="title is-2 section-heading">HPC & AI Compute Management</h2>
+            <div class="content is-size-5">
+                <ul>
+                    <li class="mb-2"><strong>Server Admin:</strong> Deployment, hardware monitoring, and thermal management.</li>
+                    <li class="mb-2"><strong>Orchestration:</strong> Slurm, Docker/Singularity environments with CUDA GPUs.</li>
+                    <li class="mb-2"><strong>Storage:</strong> High-throughput dataset I/O optimization using <strong>BeeGFS</strong> and <strong>NFS</strong>.</li>
+                    <li class="mb-2"><strong>Data Distribution:</strong> Architected and maintain a geo-distributed dual-mirror file system (<a href="https://east.ph.in.th/">east.ph.in.th</a> / <a href="https://west.ph.in.th/">west.ph.in.th</a>) to reliably serve large-scale datasets for sharing my research.</li>
+                    <li class="mb-2"><strong>Web:</strong> Maintaining and coding web applications using LAMP stack and modern JavaScript frameworks.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section has-background-light">
+        <div class="container">
+            <h2 class="title is-2 section-heading has-text-dark">Skills & Tools</h2>
+            
+            <div class="columns">
+                <div class="column is-half">
+                    <h3 class="title is-4 mb-4  has-text-dark">
+                        <span class="icon is-small mr-2"><i class="fas fa-brain"></i></span>
+                        AI & Computer Vision
+                    </h3>
+                    <div class="tags are-medium">
+                        <a href="https://pytorch.org/" target="_blank" class="tag is-light is-link">PyTorch</a>
+                        <a href="https://www.python.org/" target="_blank" class="tag is-light is-link">Python</a>
+                        <a href="https://www.pytorchlightning.ai/" target="_blank" class="tag is-light is-link">PyTorch Lightning</a>
+                        <a href="https://opencv.org/" target="_blank" class="tag is-light is-link">OpenCV</a>
+                        <a href="https://huggingface.co/docs/diffusers/index" target="_blank" class="tag is-light is-link">Diffusers</a>
+                        <a href="https://www.blender.org/" target="_blank" class="tag is-light is-link">Blender</a>
+                        <a href="https://stability.ai/" target="_blank" class="tag is-light is-link">Stable Diffusion</a>
+                    </div>
+                </div>
+
+                <div class="column is-half">
+                    <h3 class="title is-4 mb-4  has-text-dark">
+                        <span class="icon is-small mr-2"><i class="fas fa-server"></i></span>
+                        HPC & Infrastructure
+                    </h3>
+                    <div class="tags are-medium">
+                        <a href="https://ubuntu.com/server" target="_blank" class="tag is-light is-primary">Ubuntu Server</a>
+                        <a href="https://rockylinux.org/" target="_blank" class="tag is-light is-primary">Rocky Linux</a>
+                        <a href="https://www.centos.org/" target="_blank" class="tag is-light is-primary">CentOS</a>
+                        <a href="https://www.proxmox.com/en/" target="_blank" class="tag is-light is-primary">Proxmox</a>
+                        <a href="https://slurm.schedmd.com/" target="_blank" class="tag is-light is-primary">Slurm</a>
+                        <a href="https://www.docker.com/" target="_blank" class="tag is-light is-primary">Docker</a>
+                        <a href="https://sylabs.io/singularity/" target="_blank" class="tag is-light is-primary">Singularity</a>
+                        <a href="https://www.beegfs.com/" target="_blank" class="tag is-light is-primary">BeeGFS</a>
+                        <a href="https://www.truenas.com/" target="_blank" class="tag is-light is-primary">TrueNAS / ZFS / NFS</a>
+                        <a href="https://httpd.apache.org/" target="_blank" class="tag is-light is-primary">LAMP (Apache + MySQL + PHP)</a>
+                        <a href="https://nodejs.org/" target="_blank" class="tag is-light is-primary">NodeJS</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="title is-2 section-heading">Experience & Education</h2>
+            <div class="columns">
+                <div class="column is-half">
+                    <h3 class="title is-4">
+                        <span class="icon is-small mr-2"><i class="fas fa-briefcase"></i></span>
+                        Experience
+                    </h3>
+                    <div class="content mt-4">
+                        <p><strong>2019 - Present</strong><br>HPC Admin @ <a href="https://www.vistec.ac.th/" target="_blank">VISTEC</a></p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <h3 class="title is-4">
+                        <span class="icon is-small mr-2"><i class="fas fa-university"></i></span>
+                        Education
+                    </h3>
+                    <div class="content mt-4">
+                        <p><strong>2019 - Present</strong><br> Ph.D. in Information Science and Technology @ <a href="https://www.vistec.ac.th/" target="_blank">VISTEC</a></p>
+                        <p><strong>2015 - 2019 </strong><br> B.Sc in Mathematics @ <a href="https://su.ac.th/" target="_blank">Silpakorn University</a> <br> GPA: 3.62 / 4.00 (First Class Honors)</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section has-background-dark has-text-light">
+        <div class="has-text-centered mt-6 mb-6">
+            <h3 class="title is-4">Get in Touch</h3>
+            <p class="mb-4">Feel free to reach out for collaborations or questions.</p>
+            
+            <div class="buttons is-centered">
+                <a href="mailto:pakkapon.p_s19@vistec.ac.th" class="button is-outlined is-light">
+                    <span class="icon mr-2">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>Email Me</span>
+                </a>
+
+                <a href="https://fb.com/pureexe" target="_blank" class="button is-link">
+                    <span class="icon mr-2">
+                        <i class="fab fa-facebook"></i>
+                    </span>
+                    <span>Facebook</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
