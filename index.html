@@ -76,7 +76,7 @@
         
         /* Colors (Approximations for initial load) */
         .button.is-dark { background-color: #363636; color: #fff; }
-        .button.is-primary { background-color: #00d1b2; color: #fff; }
+        .button.is-primary { background-color: #00d1b2; color: #001f1a; }
         .button.is-light.is-outlined { background-color: transparent; border-color: #f5f5f5; color: #f5f5f5; }
 
         /* Spacing & Utilities */
@@ -86,8 +86,26 @@
         .icon { align-items: center; display: inline-flex; justify-content: center; height: 1.5rem; width: 1.5rem; }
         .is-inline-block { display: inline-block !important; }
 
+        /* Fix low contrast issues for light text on dark backgrounds */
+        .section-heading{
+            color: #fff;
+        }
+        .section-heading.has-text-dark{
+            color: #2e333d;
+        }
+        .has-text-dark{
+            color: #2e333d;
+        }
+        .experience-section .content strong{
+            color: #fff;
+        }
+        .experience-section .content a{
+            color: #7585ff;
+            text-decoration: underline;
+        }
+
         /* =========================================
-        YOUR EXISTING CUSTOM CSS BELOW
+         CUSTOM CSS BELOW
         ========================================= */
 
         .lang-toggle {
@@ -419,7 +437,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section experience-section">
             <div class="container">
                 <h2 class="title is-2 section-heading">Experience & Education</h2>
                 <div class="columns">
@@ -429,7 +447,7 @@
                             Experience
                         </h3>
                         <div class="content mt-4">
-                            <p><strong>2019 - Present</strong><br>HPC Admin @ <a href="https://www.vistec.ac.th/" target="_blank" style="text-decoration: underline;">VISTEC</a></p>
+                            <p><strong>2019 - Present</strong><br>HPC Admin @ <a href="https://www.vistec.ac.th/" target="_blank" >VISTEC</a></p>
                         </div>
                     </div>
                     <div class="column is-half">
@@ -438,8 +456,8 @@
                             Education
                         </h3>
                         <div class="content mt-4">
-                            <p><strong>2019 - Present</strong><br> Ph.D. in Information Science and Technology @ <a href="https://www.vistec.ac.th/" target="_blank" style="text-decoration: underline;">VISTEC</a></p>
-                            <p><strong>2015 - 2019 </strong><br> B.Sc in Mathematics @ <a href="https://su.ac.th/" target="_blank" style="text-decoration: underline;">Silpakorn University</a> <br> GPA: 3.62 / 4.00 (First Class Honors)</p> 
+                            <p><strong>2019 - Present</strong><br> Ph.D. in Information Science and Technology @ <a href="https://www.vistec.ac.th/" target="_blank">VISTEC</a></p>
+                            <p><strong>2015 - 2019 </strong><br> B.Sc in Mathematics @ <a href="https://su.ac.th/" target="_blank">Silpakorn University</a> <br> GPA: 3.62 / 4.00 (First Class Honors)</p> 
                         </div>
                     </div>
                 </div>

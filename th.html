@@ -76,7 +76,7 @@
         
         /* Colors (Approximations for initial load) */
         .button.is-dark { background-color: #363636; color: #fff; }
-        .button.is-primary { background-color: #00d1b2; color: #fff; }
+        .button.is-primary { background-color: #00d1b2; color: #001f1a; }
         .button.is-light.is-outlined { background-color: transparent; border-color: #f5f5f5; color: #f5f5f5; }
 
         /* Spacing & Utilities */
@@ -86,8 +86,27 @@
         .icon { align-items: center; display: inline-flex; justify-content: center; height: 1.5rem; width: 1.5rem; }
         .is-inline-block { display: inline-block !important; }
 
+        /* Fix low contrast issues for light text on dark backgrounds */
+        .section-heading{
+            color: #fff;
+        }
+        .section-heading.has-text-dark{
+            color: #2e333d;
+        }
+        .has-text-dark{
+            color: #2e333d;
+        }
+        .experience-section .content strong{
+            color: #fff;
+        }
+        .experience-section .content a{
+            color: #7585ff;
+            text-decoration: underline;
+        }
+
+
         /* =========================================
-        YOUR EXISTING CUSTOM CSS BELOW
+         CUSTOM CSS BELOW
         ========================================= */
 
         .lang-toggle {
@@ -416,7 +435,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section experience-section">
             <div class="container">
                 <h2 class="title is-2 section-heading">ประสบการณ์และการศึกษา</h2>
                 <div class="columns">
@@ -426,7 +445,7 @@
                             ประสบการณ์ทำงาน
                         </h3>
                         <div class="content mt-4">
-                            <p><strong>2019 - ปัจจุบัน</strong><br>ผู้ดูแลระบบ HPC @ <a href="https://www.vistec.ac.th/" target="_blank" style="text-decoration: underline;">VISTEC</a></p>
+                            <p><strong>2019 - ปัจจุบัน</strong><br>ผู้ดูแลระบบ HPC @ <a href="https://www.vistec.ac.th/" target="_blank" >VISTEC</a></p>
                         </div>
                     </div>
                     <div class="column is-half">
@@ -435,8 +454,8 @@
                             การศึกษา
                         </h3>
                         <div class="content mt-4">
-                            <p><strong>2019 - ปัจจุบัน</strong><br> ปริญญาเอก สาขาวิทยาศาสตร์และเทคโนโลยีสารสนเทศ @ <a href="https://www.vistec.ac.th/" target="_blank" style="text-decoration: underline;">VISTEC</a></p>
-                            <p><strong>2015 - 2019 </strong><br> ปริญญาตรี สาขาคณิตศาสตร์ @ <a href="https://su.ac.th/" target="_blank" style="text-decoration: underline;">มหาวิทยาลัยศิลปากร</a> <br> เกรดเฉลี่ย: 3.62 / 4.00 (เกียรตินิยมอันดับ 1)</p> 
+                            <p><strong>2019 - ปัจจุบัน</strong><br> ปริญญาเอก สาขาวิทยาศาสตร์และเทคโนโลยีสารสนเทศ @ <a href="https://www.vistec.ac.th/" target="_blank" >VISTEC</a></p>
+                            <p><strong>2015 - 2019 </strong><br> ปริญญาตรี สาขาคณิตศาสตร์ @ <a href="https://su.ac.th/" target="_blank" >มหาวิทยาลัยศิลปากร</a> <br> เกรดเฉลี่ย: 3.62 / 4.00 (เกียรตินิยมอันดับ 1)</p> 
                         </div>
                     </div>
                 </div>
