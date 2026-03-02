@@ -14,12 +14,82 @@
     <title>Pakkapon Phongthawee - Computer Vision & HPC</title>
     
     <link rel="preload" as="image" href="/assets/images/vistec-1024.avif">
-
     <link rel="stylesheet" href="/assets/css/bulma-v1.0.4.min.css?v=20260228-1" media="print" onload="this.media='all'">
-    
+
+
+    <link rel="preload" as="style" href="/assets/css/fontawesome-v6.7.2.all.min.css?v=20260228-1">
     <link rel="stylesheet" href="/assets/css/fontawesome-v6.7.2.all.min.css?v=20260228-1" media="print" onload="this.media='all'">
 
+
     <style>
+        /* =========================================
+       CRITICAL BULMA CSS (Prevents Layout Shift)
+        ========================================= */
+        :root {
+            --bulma-body-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        *, ::after, ::before { box-sizing: border-box; }
+        html { background-color: #12091d; font-size: 16px; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; overflow-x: hidden; text-size-adjust: 100%; }
+        body, figure, h1, p { margin: 0; padding: 0; }
+        body { font-family: var(--bulma-body-family); font-size: 1rem; font-weight: 400; line-height: 1.5; color: #fff; }
+        a { text-decoration: none; cursor: pointer; }
+        img { height: auto; max-width: 100%; display: block; }
+
+        /* Layout Primitives */
+        .hero { align-items: stretch; display: flex; flex-direction: column; justify-content: space-between; }
+        .hero.is-medium .hero-body { padding: 9rem 1.5rem; }
+        .container { flex-grow: 1; margin: 0 auto; position: relative; width: auto; max-width: 100%; }
+        @media screen and (max-width: 768px) { 
+            .hero.is-medium .hero-body { padding: 4rem 1.5rem; } 
+        }
+        @media screen and (min-width: 1024px) { .container { max-width: 960px; } }
+        @media screen and (min-width: 1216px) { .container { max-width: 1152px; } }
+
+        /* Column Grid */
+        .columns { margin-left: -0.75rem; margin-right: -0.75rem; margin-top: -0.75rem; display: flex; }
+        .column { display: block; flex-basis: 0; flex-grow: 1; flex-shrink: 1; padding: 0.75rem; }
+        .columns.is-vcentered { align-items: center; }
+        @media screen and (min-width: 769px) {
+            .column.is-two-thirds { flex: none; width: 66.6666%; }
+            .column.is-one-third { flex: none; width: 33.3333%; }
+        }
+        @media screen and (max-width: 768px) {
+            .columns { flex-direction: column; }
+            .columns.is-reversed-mobile { flex-direction: column-reverse; }
+        }
+
+        /* Typography */
+        .title, .subtitle { word-break: break-word; margin: 0; padding: 0; }
+        .title { font-size: 2rem; font-weight: 600; line-height: 1.125; }
+        .title.is-1 { font-size: 3rem; }
+        .subtitle { font-size: 1.25rem; font-weight: 400; line-height: 1.25; }
+        .subtitle.is-3 { font-size: 2rem; }
+        .is-size-5 { font-size: 1.25rem !important; }
+        .has-text-centered { text-align: center !important; }
+
+        /* Buttons */
+        .buttons { align-items: center; display: flex; flex-wrap: wrap; justify-content: flex-start; }
+        .buttons .button { margin-bottom: 0.5rem; margin-right: 0.5rem; }
+        .button { appearance: none; align-items: center; border: 1px solid transparent; border-radius: 4px; display: inline-flex; font-size: 1rem; height: 2.5em; justify-content: center; padding: calc(0.5em - 1px) 1em; text-align: center; white-space: nowrap; font-family: inherit; }
+        .button.is-rounded { border-radius: 9999px; padding-left: calc(1em + 0.25rem); padding-right: calc(1em + 0.25rem); }
+        .button .icon:first-child:not(:last-child) { margin-left: calc(-0.5em - 1px); margin-right: 0.25em; }
+        
+        /* Colors (Approximations for initial load) */
+        .button.is-dark { background-color: #363636; color: #fff; }
+        .button.is-primary { background-color: #00d1b2; color: #fff; }
+        .button.is-light.is-outlined { background-color: transparent; border-color: #f5f5f5; color: #f5f5f5; }
+
+        /* Spacing & Utilities */
+        .mt-3 { margin-top: 0.75rem !important; }
+        .mb-5 { margin-bottom: 1.5rem !important; }
+        .mr-2 { margin-right: 0.5rem !important; }
+        .icon { align-items: center; display: inline-flex; justify-content: center; height: 1.5rem; width: 1.5rem; }
+        .is-inline-block { display: inline-block !important; }
+
+        /* =========================================
+        YOUR EXISTING CUSTOM CSS BELOW
+        ========================================= */
+
         .lang-toggle {
             position: fixed;
             top: 1.5rem;
