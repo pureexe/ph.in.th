@@ -362,14 +362,15 @@
                 </div>
             </div>
         </section>
-
+    </main>
+    <footer>
         <section class="section has-background-dark has-text-light">
             <div class="has-text-centered mt-6 mb-6">
                 <h3 class="title is-4">ช่องทางการติดต่อ</h3>
                 <p class="mb-4">ยินดีพูดคุยเรื่องความร่วมมือในโปรเจกต์ต่างๆ หรือสอบถามข้อมูลเพิ่มเติมได้ครับ</p>
                 
                 <div class="buttons is-centered">
-                    <a href="mailto:pakkapon.p_s19@vistec.ac.th" class="button is-outlined is-light">
+                    <a href="#" id="contact-btn" class="button is-outlined is-light" data-contact="cGFra2Fwb24ucF9zMTlAdmlzdGVjLmFjLnRo">
                         <span class="icon mr-2">
                             <i class="fas fa-envelope"></i>
                         </span>
@@ -385,7 +386,20 @@
                 </div>
             </div>
         </section>
-    </main>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactBtn = document.getElementById('contact-btn');
+            if (contactBtn) {
+                contactBtn.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevents the page from jumping to the top
+                    const encodedEmail = contactBtn.getAttribute('data-contact');
+                    const decodedEmail = atob(encodedEmail); // Decodes the Base64 string
+                    window.location.href = `mailto:${decodedEmail}`; // Triggers the email client
+                });
+            }
+        });
+    </script>
     
 </body>
 </html>
