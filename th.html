@@ -13,16 +13,9 @@
 
     <title>ภัคพล พงษ์ทวี - Computer Vision และระบบ HPC</title>
     
-    <!-- <link rel="preload" as="image" href="/assets/images/vistec-600.avif" media="(max-width: 768px)" fetchpriority="high"> -->
-
-    <link rel="preload"
-      as="image"
-      href="/assets/images/vistec-1024.avif"
-      imagesrcset="/assets/images/vistec-600.avif 600w, /assets/images/vistec-1024.avif 1024w"
-      imagesizes="100vw"
-      fetchpriority="high">
-
+    <link rel="preload" as="image" href="/assets/images/vistec-600.avif" media="(max-width: 768px)" fetchpriority="high">
     <link rel="stylesheet" href="/assets/css/bulma-v1.0.4.min.css?v=20260228-1" media="print" onload="this.media='all'">
+
 
     <link rel="preload" as="style" href="/assets/css/fontawesome-v6.7.2.all.min.css?v=20260303-1">
     <link rel="stylesheet" href="/assets/css/fontawesome-v6.7.2.all.min.css?v=20260303-1" media="print" onload="this.media='all'">
@@ -132,47 +125,11 @@
         /* linear-gradient(135deg, rgba(88, 46, 145, 0.7) 0%, rgba(160, 34, 58, 0.7) 100%)  */
         /* linear-gradient(rgba(41, 50, 71, 0.85), rgba(15, 23, 42, 0.95)), */
 
-        /*
-        .hero-with-bg {
+         .hero-with-bg {
             background: linear-gradient(135deg, rgba(18, 9, 29, 0.85) 0%, rgba(32, 7, 12, 0.85) 100%), 
                         url('/assets/images/vistec-1024.avif') no-repeat center center;
             background-size: cover;
-        }*/
-
-        .hero-with-bg {
-            position: relative;
-            overflow: hidden;
         }
-
-        /* Background image */
-        .hero-bg-img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0; /* NOT negative */
-        }
-
-        /* Gradient overlay */
-        .hero-with-bg::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                135deg,
-                rgba(18, 9, 29, 0.85) 0%,
-                rgba(32, 7, 12, 0.85) 100%
-            );
-            z-index: 1;
-        }
-
-        /* Ensure hero content is above everything */
-        .hero-with-bg .hero-body {
-            position: relative;
-            z-index: 2;
-        }
-
         .hpc-with-bg {
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
                         url('/assets/images/cluster_v2-1024.avif') no-repeat center center;
@@ -180,28 +137,13 @@
             color: #f8fafc;
         }
 
-        .hero-with-bg {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-bg-img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-
         /* Add this for mobile backgrounds */
         @media screen and (max-width: 768px) {
-            /*
             .hero-with-bg {
                 background: linear-gradient(135deg, rgba(18, 9, 29, 0.85) 0%, rgba(32, 7, 12, 0.85) 100%), 
                             url('/assets/images/vistec-600.avif') no-repeat center center;
                 background-size: cover;
-            }*/
+            }
             
             .hpc-with-bg {
                 background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
@@ -287,19 +229,6 @@
         </a>
 
         <section class="hero is-medium hero-with-bg">
-            <img 
-                src="/assets/images/vistec-1024.avif"
-                srcset="
-                    /assets/images/vistec-600.avif 600w,
-                    /assets/images/vistec-1024.avif 1024w
-                "
-                sizes="100vw"
-                fetchpriority="high"
-                loading="eager"
-                decoding="async"
-                class="hero-bg-img"
-                alt="VISTEC Campus"
-            >
             <div class="hero-body">
                 <div class="container">
                     <div class="columns is-vcentered is-reversed-mobile">
