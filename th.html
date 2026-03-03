@@ -121,27 +121,23 @@
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
-        /* linear-gradient(135deg, rgba(88, 46, 145, 0.7) 0%, rgba(160, 34, 58, 0.7) 100%)  */
         /* linear-gradient(rgba(41, 50, 71, 0.85), rgba(15, 23, 42, 0.95)), */
 
-        /* Container must be relative to hold the absolute background */
         .hero-with-bg {
             position: relative;
             background-color: #12091d; /* Solid fallback color */
         }
 
-        /* Position the actual image behind everything */
         .hero-bg-picture img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Prevents squishing, acts just like background-size: cover */
+            object-fit: cover; 
             z-index: 0;
         }
 
-        /* Position the gradient overlay on top of the image */
         .hero-bg-overlay {
             position: absolute;
             top: 0;
@@ -152,29 +148,41 @@
             z-index: 1;
         }
 
-        /* Ensure your text stays on top of the background and overlay */
         .hero-with-bg .hero-body {
             position: relative;
             z-index: 2; 
         }
 
         .hpc-with-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
-                        url('/assets/images/cluster_v2-1024.avif') no-repeat center center;
-            background-size: cover;
+            position: relative;
+            background-color: #0f172a; 
             color: #f8fafc;
+            overflow: hidden; 
         }
 
-        /* Add this for mobile backgrounds */
-        @media screen and (max-width: 768px) {
-            
-            .hpc-with-bg {
-                background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
-                            url('/assets/images/cluster_v2-300.avif') no-repeat center center;
-                background-size: cover;
-                color: #f8fafc;
-            }
-            
+        .hpc-bg-picture img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            z-index: 0;
+        }
+
+        .hpc-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95));
+            z-index: 1;
+        }
+
+        .hpc-with-bg .container {
+            position: relative;
+            z-index: 2;
         }
 
         .hero-with-bg .title, 
@@ -198,15 +206,15 @@
             border-radius: 50%;
             overflow: hidden;
             box-shadow: 0 10px 15px rgba(0,0,0,0.5);
-            width: 256px;  /* Force a perfect square container */
-            height: 256px; /* Force a perfect square container */
+            width: 256px;  
+            height: 256px; 
             margin: 0 auto;
             display: flex;
         }
         .profile-img-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* This prevents the squishing! */
+            object-fit: cover; 
         }
 
         .visual-placeholder {
@@ -429,6 +437,12 @@
         </section>
 
         <section class="section hpc-with-bg" style="padding-top: 6rem; padding-bottom: 6rem;">
+            <picture class="hpc-bg-picture">
+                <source media="(max-width: 768px)" srcset="/assets/images/cluster_v2-300.avif">
+                <img src="/assets/images/cluster_v2-1024.avif" alt="HPC Cluster Environment" loading="lazy">
+            </picture>
+            
+            <div class="hpc-bg-overlay"></div>
             <div class="container">
                 <h2 class="title is-2 section-heading">การจัดการระบบประมวลผล HPC และ AI</h2>
                 <div class="content is-size-5">
