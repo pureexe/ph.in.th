@@ -13,6 +13,7 @@
 
     <title>ภัคพล พงษ์ทวี - Computer Vision และระบบ HPC</title>
     
+    <link rel="preload" as="image" href="/assets/images/vistec-600.avif" media="(max-width: 768px)" fetchpriority="high">
     <link rel="stylesheet" href="/assets/css/bulma-v1.0.4.min.css?v=20260228-1" media="print" onload="this.media='all'">
 
 
@@ -124,23 +125,11 @@
         /* linear-gradient(135deg, rgba(88, 46, 145, 0.7) 0%, rgba(160, 34, 58, 0.7) 100%)  */
         /* linear-gradient(rgba(41, 50, 71, 0.85), rgba(15, 23, 42, 0.95)), */
 
-         
-        /* Initial state: 100% opacity gradient, NO image (Instant LCP) */
-        .hero-with-bg {
-            background: linear-gradient(135deg, rgba(18, 9, 29, 1) 0%, rgba(32, 7, 12, 1) 100%);
-            background-size: cover;
-            /* Optional: Adds a subtle fade-in effect when the image loads */
-            transition: background 0.1s ease-in-out; 
-        }
-
-        /* Loaded state: 85% opacity gradient WITH the image */
-        .hero-with-bg.bg-loaded {
+         .hero-with-bg {
             background: linear-gradient(135deg, rgba(18, 9, 29, 0.85) 0%, rgba(32, 7, 12, 0.85) 100%), 
                         url('/assets/images/vistec-1024.avif') no-repeat center center;
             background-size: cover;
         }
-
-       
         .hpc-with-bg {
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
                         url('/assets/images/cluster_v2-1024.avif') no-repeat center center;
@@ -150,7 +139,7 @@
 
         /* Add this for mobile backgrounds */
         @media screen and (max-width: 768px) {
-            .hero-with-bg.bg-loaded {
+            .hero-with-bg {
                 background: linear-gradient(135deg, rgba(18, 9, 29, 0.85) 0%, rgba(32, 7, 12, 0.85) 100%), 
                             url('/assets/images/vistec-600.avif') no-repeat center center;
                 background-size: cover;
@@ -521,25 +510,6 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-             // REDUCE LCP BY LAZY-LOADING THE HERO BACKGROUND IMAGE WITH A GRADIENT PLACEHOLDER
-            // 1. Target the hero section
-            const heroSection = document.querySelector('.hero-with-bg');
-            
-            if (heroSection) {
-                // 2. Determine which image to fetch based on viewport width (matches your CSS media queries)
-                const isMobile = window.innerWidth <= 768;
-                const bgUrl = isMobile ? '/assets/images/vistec-600.avif' : '/assets/images/vistec-1024.avif';
-                
-                // 3. Preload the image in JS
-                const img = new Image();
-                img.onload = () => {
-                    // 4. Once fully loaded, apply the class to reveal the image and drop gradient opacity
-                    heroSection.classList.add('bg-loaded');
-                };
-                img.src = bgUrl;
-            }
-
-            // CONTACT BUTTON LOGIC
             const contactBtn = document.getElementById('contact-btn');
             if (contactBtn) {
                 contactBtn.addEventListener('click', (e) => {
