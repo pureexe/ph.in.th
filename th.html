@@ -529,7 +529,15 @@
                             const source = video.target.querySelector("source");
                             source.src = source.dataset.src;
                             video.target.load();
-                            video.target.play();
+                            // Yield to the main thread before initiating playback
+
+                            requestAnimationFrame(() => {
+
+                                // Catch handles edge cases where browsers block autoplay
+
+                                video.target.play().catch(err => console.warn("Autoplay prevented:", err));
+
+                            });
                             lazyVideoObserver.unobserve(video.target);
                         }
                     });
