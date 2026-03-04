@@ -1,13 +1,15 @@
 RewriteEngine On
 
+# 1. Handle Extensionless URLs (/path -> /path.html)
 # If the requested file does not exist
 RewriteCond %{REQUEST_FILENAME} !-f
-
 # If the requested directory does not exist
 RewriteCond %{REQUEST_FILENAME} !-d
-
 # But if a .html version exists
 RewriteCond %{REQUEST_FILENAME}.html -f
-
 # Rewrite /path → /path.html
 RewriteRule ^(.+)$ $1.html [L]
+
+# 2. Handle 404 Errors
+# If nothing above matched and the file truly doesn't exist, show this page
+ErrorDocument 404 /404.html
